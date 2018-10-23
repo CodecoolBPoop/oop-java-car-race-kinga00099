@@ -15,11 +15,6 @@ public class Race {
         }
     }
 
-    boolean isRaining() {
-        return Weather.isRaining();
-    }
-
-
     private static boolean isThereABrokenTruck() {
         for (Vehicle vehicle : vehicles) {
             if (vehicle instanceof Truck) {
