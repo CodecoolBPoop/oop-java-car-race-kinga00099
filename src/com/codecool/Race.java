@@ -48,14 +48,13 @@ public class Race {
                     vehicle.setMaximumSpeed(999);
                 }
                 if (Weather.isRaining() && vehicle instanceof Motorcycle) {
-                    Random rand = new Random();
-                    int newSpeedMax = 100 - rand.nextInt(51 - 5) + 5;
-                    if (newSpeedMax < vehicle.getMaximumSpeed()) {
-                        vehicle.setMaximumSpeed(newSpeedMax);
+                    Random random = new Random();
+                    int maximumSpeed = 100 - random.nextInt(51 - 5) + 5;
+                    if (maximumSpeed < vehicle.getMaximumSpeed()) {
+                        vehicle.setMaximumSpeed(maximumSpeed);
                     }
                 }
                 vehicle.moveForAnHour(this);
-
             }
         }
     }
