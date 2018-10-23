@@ -42,6 +42,20 @@ class Vehicle {
             distanceTraveled = distanceTraveled + speed;
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder vehicleAttributes = new StringBuilder("{type: ")
+                .append(getClass().getSimpleName())
+                .append(", ")
+                .append("name: ")
+                .append(name)
+                .append(", ")
+                .append("distance travelled: ")
+                .append(distanceTraveled)
+                .append("}");
+        return vehicleAttributes.toString();
+    }
 }
 
 
