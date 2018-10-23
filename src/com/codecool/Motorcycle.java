@@ -1,4 +1,4 @@
 package com.codecool;
 
-public class Motorcycle extends Vehicle {
+class Motorcycle extends Vehicle {
 }
