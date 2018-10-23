@@ -42,6 +42,11 @@ public class Race {
                         ((Truck) vehicle).breakdownRoll();
                     }
                 }
+                if (isThereABrokenTruck()) {
+                    vehicle.setMaximumSpeed(75);
+                } else {
+                    vehicle.setMaximumSpeed(999);
+                }
 
                 vehicle.moveForAnHour(this);
 
