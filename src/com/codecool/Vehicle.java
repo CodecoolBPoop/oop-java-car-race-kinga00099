@@ -2,8 +2,8 @@ package com.codecool;
 
 class Vehicle {
 
-    private int speed = 0; // km/h
-    private int maximumSpeed = 999; // km/h
+    private int speed = 0;
+    private int maximumSpeed = 999;
     private String name;
     private int distanceTraveled = 0;
 
