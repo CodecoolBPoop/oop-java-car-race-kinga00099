@@ -35,7 +35,12 @@ class Vehicle {
         return distanceTraveled;
     }
 
-    void moveForAnHour() {
+    void moveForAnHour(Race race) {
+        if (speed > maximumSpeed) {
+            distanceTraveled = distanceTraveled + maximumSpeed;
+        } else {
+            distanceTraveled = distanceTraveled + speed;
+        }
     }
 }
 
