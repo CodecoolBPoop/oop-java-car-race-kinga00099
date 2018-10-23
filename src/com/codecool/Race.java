@@ -2,6 +2,7 @@ package com.codecool;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Race {
     private static List<Vehicle> vehicles = new ArrayList<>();
@@ -34,7 +35,16 @@ public class Race {
         for (int i = 0; i < 50; i++) {
             Weather.setRaining();
             for (Vehicle vehicle : vehicles) {
+                if (vehicle instanceof Truck) {
+                    if (((Truck) vehicle).getBreakdownTurnsLeft() > 0) {
+                        ((Truck) vehicle).setBreakdownTurnsLeft(((Truck) vehicle).getBreakdownTurnsLeft() - 1);
+                    } else {
+                        ((Truck) vehicle).breakdownRoll();
+                    }
+                }
+
                 vehicle.moveForAnHour(this);
+
             }
         }
     }
